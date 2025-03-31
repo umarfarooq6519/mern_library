@@ -8,10 +8,10 @@ import productRoutes from "./routes/product.route.js";
 
 dotenv.config();
 
-app.use(cors({ origin: "*" })); // Allow all origins
-
 const app = express();
 const PORT = process.env.PORT;
+
+app.use(cors({ origin: "*" })); // Allow all origins
 
 const __dirname = path.resolve();
 
