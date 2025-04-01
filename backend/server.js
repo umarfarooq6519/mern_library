@@ -11,7 +11,19 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT;
 
-app.use(cors({ origin: "*" })); // Allow all origins
+const allowedOrigins = [
+  "http://localhost:5173", // Local development
+  "https://mern-product-app.vercel.app", // Vercel frontend
+];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true, // Allow cookies if needed
+    methods: ["GET", "POST", "PUT", "DELETE"], // Restrict allowed HTTP methods
+    allowedHeaders: ["Content-Type", "Authorization"], // Restrict allowed headers
+  })
+);
 
 const __dirname = path.resolve();
 
