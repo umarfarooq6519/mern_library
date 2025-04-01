@@ -12,8 +12,7 @@ const app = express();
 const PORT = process.env.PORT;
 
 const allowedOrigins = [
-  "http://localhost:5173", // Local development
-  "https://mern-product-app.vercel.app", // Vercel frontend
+  process.env.CLIENT_BASE_URL, // client side url
 ];
 
 app.use(
