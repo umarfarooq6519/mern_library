@@ -13,26 +13,26 @@ A simple MERN app to manage books inventory with fields like name, price, image,
 
 ## Tech Stack
 
-- **Frontend**: React + Vite + Chakra UI
-- **Backend**: Express + MongoDB + Mongoose
+- **Client**: React + Vite + Chakra UI
+- **Server**: Express + MongoDB + Mongoose
 - **State Management**: Zustand
 
 ## Getting Started
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-repo/learn_mern
+   git clone https://github.com/umarfarooq6519/mern_library
    cd learn_mern
    ```
 2. Run the Frontend server:
    ```bash
-   cd frontend
+   cd client
    npm install
    npm run dev
    ```
 3. Run the Backend server:
    ```bash
-   cd backend
+   cd server
    npm install
    npm run dev
    ```
