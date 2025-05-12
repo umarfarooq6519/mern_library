@@ -14,6 +14,15 @@ const productSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    sold: {
+      type: Boolean,
+      required: true,
+    },
+    soldInfo: {
+      name: String,
+      email: String,
+      location: String,
+    },
   },
   {
     timestamps: true, // createdAt, updatedAt

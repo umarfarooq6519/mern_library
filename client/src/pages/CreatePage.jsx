@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Box,
   Button,
@@ -8,7 +9,6 @@ import {
   useToast,
   VStack,
 } from "@chakra-ui/react";
-import { useState } from "react";
 import { useProductStore } from "../store/product.store";
 
 function CreatePage() {
@@ -16,7 +16,9 @@ function CreatePage() {
     name: "",
     price: "",
     imageURL: "",
+    sold: false,
   });
+
   const { createProduct } = useProductStore();
 
   const toast = useToast();
@@ -38,14 +40,18 @@ function CreatePage() {
         isClosable: true,
       });
     }
-    setNewProduct({ name: "", price: "", imageURL: "" });
+    setNewProduct({
+      name: "",
+      price: "",
+      imageURL: "",
+    });
   };
 
   return (
     <Container maxW={"container.sm"}>
       <VStack spacing={8}>
         <Heading as={"h1"} size={"2xl"} mb={8}>
-          Create New Product
+          Add New Book
         </Heading>
 
         <Box
@@ -57,7 +63,7 @@ function CreatePage() {
         >
           <VStack spacing={4}>
             <Input
-              placeholder={"Product name"}
+              placeholder={"Book name"}
               name={"name"}
               value={newProduct.name}
               onChange={(e) =>
@@ -66,7 +72,7 @@ function CreatePage() {
             />
 
             <Input
-              placeholder={"Product Price ($)"}
+              placeholder={"Book Price (PKR)"}
               name={"price"}
               value={newProduct.price}
               onChange={(e) =>
