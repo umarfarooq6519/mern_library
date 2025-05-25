@@ -26,6 +26,7 @@ import { FaHandshake } from "react-icons/fa";
 function ProductCard({ product }) {
   const textColor = useColorModeValue("gray.600", "gray.200");
   const bgColor = useColorModeValue("white", "gray.800");
+  const cardBorderColor = useColorModeValue("gray.300", "gray.700");
 
   const { deleteProduct, updateProduct } = useProductStore();
   const [updatedProduct, setUpdatedProduct] = useState(product);
@@ -78,19 +79,23 @@ function ProductCard({ product }) {
 
   return (
     <Box
-      shadow="lg"
+      height="100%"
+      h="470px"
       rounded="lg"
       overflow="hidden"
       transition="all 0.3s"
       _hover={{ transform: "translateY(-5px)", shadow: "xl" }}
       bg={bgColor}
+      border="1px"
+      borderColor={cardBorderColor}
     >
       <Image
         src={product.imageURL}
         alt={product.name}
-        h={48}
+        h={80}
         w="full"
         objectFit="cover"
+        objectPosition="bottom"
       />
 
       <Box p={4}>

@@ -17,7 +17,7 @@ import SoldBooks from "./SoldBooks";
 function HomePage() {
   const { fetchProducts, products } = useProductStore();
 
-  const bgColor = useColorModeValue("gray.300", "gray.700");
+  const bgColor = useColorModeValue("gray.100", "gray.900");
   const textColor = useColorModeValue("black", "white");
   const activeBgColor = useColorModeValue("gray.700", "gray.400");
   const activeTextColor = useColorModeValue("gray.200", "gray.800");

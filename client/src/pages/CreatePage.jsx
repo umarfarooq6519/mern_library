@@ -50,7 +50,7 @@ function CreatePage() {
   return (
     <Container maxW={"container.sm"}>
       <VStack spacing={8}>
-        <Heading as={"h1"} size={"2xl"} mb={8}>
+        <Heading as={"h1"} size={"2xl"}  mb={8}>
           Add New Book
         </Heading>
 

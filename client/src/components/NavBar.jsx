@@ -25,7 +25,13 @@ function NavBar() {
         }}
       >
         <Text fontSize={22} fontWeight={"bold"}>
-          <Link to={"/"}>Book Store 🛒</Link>
+          <Link
+            to="/"
+            style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}
+          >
+            <img src="/books.png" alt="" width={28} height={28} />
+            Library
+          </Link>
         </Text>
 
         <HStack spacing={2} alignItems={"center"}>

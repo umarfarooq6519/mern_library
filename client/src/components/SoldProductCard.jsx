@@ -14,6 +14,7 @@ import { useProductStore } from "../store/product.store";
 function SoldProductCard({ product }) {
   const textColor = useColorModeValue("gray.600", "gray.200");
   const bgColor = useColorModeValue("white", "gray.800");
+  const cardBorderColor = useColorModeValue("gray.300", "gray.700");
 
   const { updateProduct } = useProductStore();
   const toast = useToast();
@@ -35,13 +36,22 @@ function SoldProductCard({ product }) {
   if (!product.sold) return null;
 
   return (
-    <Box shadow="md" rounded="lg" overflow="hidden" bg={bgColor} p={4}>
+    <Box
+      //  shadow="md"
+      rounded="lg"
+      overflow="hidden"
+      bg={bgColor}
+      p={4}
+      border="1px"
+      borderColor={cardBorderColor}
+    >
       <Image
         src={product.imageURL}
         alt={product.name}
-        h={48}
+        h={56}
         w="full"
         objectFit="cover"
+        objectPosition='bottom'
         mb={4}
       />
 

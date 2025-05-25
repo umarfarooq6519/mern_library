@@ -9,7 +9,7 @@ export default function Library({ products }) {
         columns={{
           base: 1,
           md: 2,
-          lg: 3,
+          lg: 4,
         }}
         spacing={10}
         w={"full"}
